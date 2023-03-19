@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    h1 {
+        @apply text-indigo-600
+    }
+}
+
+@layer components {
+    .p-btn {
+        @apply rounded-md p-2 bg-indigo-800 text-center text-white font-bold
+    }
+}
