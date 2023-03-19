@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { Primarybtn,  BtnName } from './Primarybtn';
+import MainInput from './MainInput';
+import { useState } from 'react';
+const App = () => {
+    const name = "Yansane";
+    // declaring a state
+    const [prenom, setPrenom] = useState("Mohamed");
+    const [btnName, setBtn] = useState("default name") ;
+    return (
+      <>
+        <div className="flex flex-col max-w-sm gap-1 p-4">
+          <h1 className="">Hello {prenom} {name}</h1>
+          <MainInput setPrenom={setPrenom}/>
+          <input
+            type="text"
+            name=""
+            id=""
+            onChange={(e)=>
+            setBtn(e.target.value)}
+            placeholder="Enter the button name "
+            className=" border rounded-md p-2 w-sm   hover:outline-indigo-600" />
+            <BtnName btn_name = {btnName}/>
+            <Primarybtn />
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+        </div>
+      </>
+    );
 }
 
 export default App;
