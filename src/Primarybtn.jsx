@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Primarybtn = () => {
+export const Primarybtn = ({btn_name}) => {
   return (
-    <button type="submit" className="p-btn">Go</button>
+    <button type="submit" className="p-btn">{btn_name}</button>
 
   )
 }
